@@ -64,7 +64,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Brkic365/EBankc-Website.git
-cd ebankc-defi
+cd EBankc-Website
 ```
 
 Install dependencies:
