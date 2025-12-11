@@ -63,7 +63,7 @@ Installation
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/ebankc-defi.git
+git clone https://github.com/Brkic365/ebankc-defi.git
 cd ebankc-defi
 ```
 
