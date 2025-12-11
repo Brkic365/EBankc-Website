@@ -1,34 +1,115 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**EBankc - DeFi Banking Platform 🏦**
 
-## Getting Started
+EBankc is a modern Next.js web application designed for a Decentralized Finance (DeFi) banking platform. It serves as the frontend interface for users to explore crypto assets, earn interest, borrow against holdings, and learn about the ecosystem via a blog and FAQ.
 
-First, run the development server:
+🚀 Key Features
+
+Responsive UI/UX: Fully responsive design featuring a custom mobile menu and smooth transitions using Framer Motion.
+
+Dynamic Blog System: A blog section with tagging support, main feature posts, and individual post routing (/blog/post/[id]).
+
+Asset & Data Visualization: Custom components to display crypto asset growth, token statistics, and complex data tables (Karma Levels).
+
+SEO Optimized: Integrated Next-SEO for managing Open Graph tags, titles, and meta descriptions across all pages.
+
+Informational Pages: Dedicated sections for Corporate clients, Token utility (EBCT), Statistics, and Company background.
+
+FAQ System: an interactive, categorized Frequently Asked Questions section.
+
+🛠️ Tech Stack
+
+Framework: Next.js (Pages Router)
+
+Library: React
+
+Styling: Sass / SCSS Modules
+
+Animations: Framer Motion
+
+SEO: next-seo
+
+📂 Project Structure
+```bash
+├── components/          # Reusable UI components
+│   ├── Asset.jsx        # Crypto asset card display
+│   ├── BlogPost.jsx     # Blog post card (Main and Mini variants)
+│   ├── Footer.jsx       # Global application footer
+│   ├── Navbar.jsx       # Responsive navigation bar with Mobile Menu
+│   └── Table.jsx        # Data table for Karma/Reward levels
+├── pages/               # Application routes
+│   ├── blog/            # Blog listing, tags, and dynamic post pages
+│   ├── faq/             # FAQ listing and section views
+│   ├── _app.js          # Global entry point (SEO & Global styles)
+│   ├── index.js         # Homepage
+│   ├── corporates.js    # B2B/Corporate landing page
+│   ├── token.js         # EBCT Token utility info
+│   └── stats.js         # Platform statistics
+├── styles/              # SCSS Modules and Global styles
+└── public/              # Static assets (images, icons)
+```
+
+⚡ Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+Prerequisites
+
+Node.js (v14 or newer)
+
+npm or yarn
+
+Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/ebankc-defi.git
+cd ebankc-defi
+```
+
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+📖 Component Highlights
+Karma Table (Table.jsx)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+A specialized component designed to display reward tiers. It handles complex grid layouts to show how holding EBCT tokens increases APY rates for different assets.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Navigation (Navbar.jsx)
 
-## Learn More
+Includes a framer-motion powered sidebar for mobile devices. It automatically highlights the active link and creates an animated underline effect for the current page.
 
-To learn more about Next.js, take a look at the following resources:
+Blog System (pages/blog/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Currently utilizes local data arrays to render posts. It supports:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Main Post: A featured article at the top.
 
-## Deploy on Vercel
+Sub Posts: Secondary highlighted articles.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tag Filtering: Filter posts via query parameters (e.g., /blog/tag?q=DeFi).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🔮 Future Improvements
+
+CMS Integration: Connect the Blog and Team sections to a Headless CMS (like Contentful or Strapi) instead of using hardcoded arrays.
+
+Live Data: Connect the stats.js and token.js pages to a real Crypto API (like CoinGecko) to fetch real-time EBCT prices and market caps.
+
+Authentication: Integrate the Login/Signup buttons with a backend auth provider.
+
+📄 License
+
+This project is open source and available under the MIT License.
